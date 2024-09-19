@@ -40,12 +40,13 @@ function transaction(cash, money, newBalance) {
     p.innerText = `Added ${money} TK.
     New Balance = ${newBalance}`;
     div.classList.add("bg-green-600");
+    div.append(h3, p);
   } else {
     h3.innerText = "Cash Out";
     div.classList.add("bg-red-600");
     p.innerText = `Cash Out ${money} TK.  
     New Balance = ${newBalance}`;
+    div.append(h3, p);
   }
 
-  div.append(h3, p);
 }
