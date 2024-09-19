@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MFS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-2 justify-start">
+                <div class="bg-primary text-primary-content w-full">
+                    <div class="stat">
+                      <div class="text-white">Account balance</div>
+                      <div class="stat-value">$<span id="amount">500</span></div>
+                      <div class="stat-actions">
+                        <button class="btn btn-sm btn-success" id="cashInBtn">Add funds</button>
+                        <button class="btn btn-sm" id="cashOutBtn">Cash Out</button>
+                        <button class="btn btn-sm" id="transactionBtn">Transaction</button>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+
+                  <div id="cashInForm" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input type="text" autocomplete="off" id="addAmount" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin number</span>
+                        </label>
+                        <input type="password" id="addPin" placeholder="Pin" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary" id="addBtn">Add Cash</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="cashOutForm" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input id="cashOutAmount" type="text" placeholder="Amount" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin number</span>
+                        </label>
+                        <input id="cashOutPin" type="password" placeholder="Pin" class="input input-bordered" required />
+                        
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary" id="costBtn">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div id="transaction-sec" class="hidden w-full"></div>
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <script src="js/display.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/cashIn2.js"></script>
+    <script src="js/cashOut2.js"></script>
+    <script src="js/transaction.js"></script>
+  </body>
+</html>
